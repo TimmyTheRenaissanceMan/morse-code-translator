@@ -38,7 +38,7 @@ def decode(text, morse_alphabet):
         except:
             decoded_letter = ""
         finally:
-            decoded_text = decoded_text + decoded_letter
+            decoded_text += decoded_letter
     print(decoded_text)
     with open("output/decoded.txt", "w", encoding="utf-8") as output_file:
         output_file.write(decoded_text)
@@ -59,7 +59,7 @@ def encode(text, morse_alphabet):
             encoded_letter = "[ERR]"
         finally:
             print(letter)
-            encoded_text = encoded_text + encoded_letter
+            encoded_text += encoded_letter
     with open("output/encoded.txt", "w", encoding="utf-8") as output_file:
         output_file.write(encoded_text)
 
